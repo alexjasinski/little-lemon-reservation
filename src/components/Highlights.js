@@ -1,4 +1,11 @@
+import React from 'react';
 
+const Highlights = () => {
 return (
-	<Highlights/>
+	<div>
+		<h1>Highlights</h1>
+	</div>
+
 )
+}
+export default Highlights;

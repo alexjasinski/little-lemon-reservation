@@ -8,16 +8,16 @@ import Testimonials from './components/Testimonials'
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Nav/>
-      <main>
+      <main className="main">
         <Hero />
         <Highlights />
         <Testimonials />
         <About />
-      </main>
       <Footer/>
-    </>
+      </main>
+    </div>
   );
 }
 

@@ -13,8 +13,7 @@ const Special1 = () => {
         <h4 id="item-price">$12.99</h4>
       </div>
       <article className="special-info">
-        The famous greek salad of crispy lettuce, peppers, olives and our
-        Chicago...
+        The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta.
       </article>
       <div id="order-bar">
         <h5 className="order-text">Order a delivery</h5>

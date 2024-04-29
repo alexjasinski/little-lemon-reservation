@@ -24,7 +24,7 @@ const About = () => {
     <div className="section-no-background">
       <div id="about">
           <h3 id="about-text">About us</h3>
-          <article id="about-info">
+          <article id="about-info" className="section-text">
             Founded in Chicago, Little Lemon Mediterranean Restaurant has been serving authentic flavors since its inception. With a rich history
             of culinary excellence, we're committed to bringing the taste of the Mediterranean to your table.
           </article>
@@ -36,7 +36,7 @@ const About = () => {
       </div>
     </div>
   );
-};
+}
 
 function Item(props) {
   return (

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo-alt.png';
-import logoMobile from '../assets/logo-default.png';
 import basket from '../assets/basket.png';
 
 const Nav = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const useNewLogo = windowWidth < 900;
-  const logoSrc = useNewLogo ? logoMobile : logo;
+  const useLogo = windowWidth < 900;
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +23,7 @@ const Nav = () => {
     <header id="header-no-background" className="section-no-background">
 
         <nav className="nav">
-    {useNewLogo && (
+    {useLogo && (
             <>
               <input type="checkbox" id="menu-toggle" />
               <label id="trigger" htmlFor="menu-toggle"></label>
@@ -40,14 +38,11 @@ const Nav = () => {
               </ul>
             </>
           )}
-          <div id="logo-header">
-            <img
+          <ul id="header-list">
+            <img id="logo-header"
               src={logo}
               alt="logo"
-              id={useNewLogo ? 'logo-header-mobile' : 'logo-header'}
             />
-          </div>
-          <ul id="header-list">
             <li className="header-item">
               <a className="nav-link" href="/home">
                 Home
@@ -76,6 +71,10 @@ const Nav = () => {
           <img className="header-item" src={basket} alt="basket" id="icon-basket" />
           </ul>
         </nav>
+          <img id="logo-header2"
+            src={logo}
+            alt="logo"
+          />
     </header>
     </>
   );

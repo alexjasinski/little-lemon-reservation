@@ -13,7 +13,7 @@ const Special2 = () => {
         <h4 id="item-price">$7.20</h4>
       </div>
       <article className="special-info">
-      Our Bruschetta is made from grilled bread that has been smeared with...
+      Our Bruschetta is made from grilled bread that has been smeared with fresh butter.
       </article>
       <div id="order-bar">
         <h5 className="order-text">Order a delivery</h5>

@@ -64,10 +64,10 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </nav>
             <div id="placeholder-container" >
             <img id="placeholder" src={placeholder} alt="placeholder"  />
             </div>
-          </nav>
         </div>
         <div id="footer-bottom">
           <div id="footer-social-container">

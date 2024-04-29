@@ -37,7 +37,7 @@ const Testimonial3 = () => {
         </div>
       </div>
       <article className="user-comment">
-      "Seriously cannot stop thinking about the delicious Mac N Cheese."
+      "Cannot stop thinking about the delicious Mac N Cheese."
       </article>
     </div>
   );

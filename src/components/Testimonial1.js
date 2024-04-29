@@ -36,7 +36,7 @@ const Testimonial1 = () => {
         </div>
       </div>
       <article className="user-comment">
-        "We had such a great time celebrating my grandmother's birthday"
+        "We had great time celebrating my grandmother's bday"
       </article>
     </div>
   );

@@ -13,7 +13,7 @@ const Special3 = () => {
         <h4 id="item-price">$5.69</h4>
       </div>
       <article className="special-info">
-      Zesty citrus meets creamy perfection. A tantalizing treat for...
+      Zesty citrus meets creamy perfection. A tantalizing treat for your taste buds, that will last.
       </article>
       <div id="order-bar">
         <h5 className="order-text">Order a delivery</h5>

@@ -6,7 +6,7 @@ import Testimonial4 from './Testimonial4';
 
 const Testimonials = () => {
   return (
-    <div className="section-background">
+    <section className="section-background">
       <div id="testimonials-container">
           <h2 id="testimonials-text">What our customers say...</h2>
         <div id="testimonials">
@@ -16,7 +16,7 @@ const Testimonials = () => {
           <Testimonial4 />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

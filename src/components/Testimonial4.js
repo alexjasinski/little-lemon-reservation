@@ -31,7 +31,7 @@ const Testimonial4 = () => {
             <h6 id="user-info-text">Emily Sanders</h6>
           </div>
           <div id="user-name">
-            <h7 id="user-name-text">EmilyS</h7>
+            <h5 id="user-name-text">EmilyS</h5>
           </div>
         </div>
       </div>

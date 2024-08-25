@@ -32,7 +32,7 @@ const Testimonial3 = () => {
             <h6 id="user-info-text">Sara Lopez</h6>
           </div>
           <div id="user-name">
-            <h7 id="user-name-text">Sara72</h7>
+            <h5 id="user-name-text">Sara72</h5>
           </div>
         </div>
       </div>

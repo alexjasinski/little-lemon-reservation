@@ -71,10 +71,10 @@ const Footer = () => {
         </div>
         <div id="footer-bottom">
           <div id="footer-social-container">
-            <img src={fb} className="footer-social" id="social-fb" />
-            <img src={ig} className="footer-social" id="social-ig" />
-            <img src={gplus} className="footer-social" id="social-gplus" />
-            <img src={linkedin} className="footer-social" id="social-linkedin" />
+            <img src={fb} alt="image footer-social" className="footer-social" id="social-fb" />
+            <img src={ig} alt="image social-ig" className="footer-social" id="social-ig" />
+            <img src={gplus} alt="image social gplus" className="footer-social" id="social-gplus" />
+            <img src={linkedin} alt="image linkedin" className="footer-social" id="social-linkedin" />
           </div>
             <p id="footer-copyright">
               &copy; 2024 Lil' Lemon LLC. All rights reserved.

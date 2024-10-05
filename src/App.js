@@ -1,12 +1,16 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
 import About from './components/About';
-import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
-import Nav from './components/Nav';
 import Testimonials from './components/Testimonials';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ReservationPage from './components/ReservationPage';
+import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
+import MenuPage from './pages/MenuPage';
+import ReservationPage from './pages/ReservationPage';
+import RestaurantsPage from './pages/RestaurantsPage';
+import BasketPage from './pages/BasketPage';
 
 function App() {
   return (
@@ -26,8 +30,12 @@ function App() {
                 </>
               }
             />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/menu" element={<MenuPage />} />
             <Route path="/reservation" element={<ReservationPage />} />
-          </Routes>
+            <Route path="/restaurants" element={<RestaurantsPage />} />
+            <Route path="/basket" element={<BasketPage />} />          
+            </Routes>
         </main>
         <Footer />
       </div>

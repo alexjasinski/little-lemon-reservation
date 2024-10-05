@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo-alt.png';
 import basket from '../assets/basket.png';
+import basketburger from  '../assets/basket-burger.png';
 import { Link } from 'react-router-dom';
-import ReservationPage from '../pages/ReservationPage';
-
 
 const Nav = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -32,30 +31,28 @@ const Nav = () => {
               <label id="burger" htmlFor="menu-toggle"></label>
               <ul id="menu">
                 <li className="header-item">
-                  <a className="nav-link" href="/">
-                    Home
-                  </a>
+                <Link to="/" className="nav-link">Home</Link>
                 </li>
                 <li className="header-item">
-                  <a className="nav-link" href="/about">
-                    About
-                  </a>
+                  <Link to="/about" className="nav-link">About</Link>
                 </li>
                 <li className="header-item">
-                  <a className="nav-link" href="/menu">
-                    Menu
-                  </a>
+                <Link to="/menu" className="nav-link">Menu</Link>
                 </li>
                 <li className="header-item">
                 <Link to="/reservation" className="nav-link">Reservation</Link>
                 </li>
                 <li className="header-item">
-                  <a className="nav-link" href="/order">
-                    Order
-                  </a>
+                <Link to="/restaurants" className="nav-link">Restaurants</Link>
                 </li>
                 <li className="header-item">
-                  <a href="/">Basket</a>
+                <Link to="/basket" className="nav-link">
+            <img
+              src={basketburger}
+              alt="basket"
+              id="icon-basket-burger"
+              />
+              </Link>
                 </li>
               </ul>
             </>
@@ -63,34 +60,30 @@ const Nav = () => {
           <ul id="header-list">
             <img id="logo-header" src={logo} alt="logo" />
             <li className="header-item">
-              <a className="nav-link" href="/">
-                Home
-              </a>
+                <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className="header-item">
-              <a className="nav-link" href="/about">
-                About
-              </a>
+            <Link to="/about" className="nav-link">About</Link>
             </li>
             <li className="header-item">
-              <a className="nav-link" href="/menu">
-                Menu
-              </a>
+            <Link to="/menu" className="nav-link">Menu</Link>
             </li>
             <li className="header-item">
-                <Link to="/reservation" className="nav-link">Reservation</Link>
-            </li>
+            <Link to="/reservation" className="nav-link">Reservation</Link>
+            </li>            
             <li className="header-item">
-              <a className="nav-link" href="/order">
-                Order
-              </a>
-            </li>
+            <Link to="/restaurants" className="nav-link">Restaurants</Link>
+            </li>            
+            <li className="header-item">
+            <Link to="/basket" className="nav-link">
             <img
               className="header-item"
               src={basket}
               alt="basket"
               id="icon-basket"
-            />
+              />
+              </Link>
+              </li>
           </ul>
         </nav>
         <img id="logo-header2" src={logo} alt="logo" />

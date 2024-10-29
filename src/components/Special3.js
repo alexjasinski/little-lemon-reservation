@@ -8,7 +8,7 @@ const Special3 = () => {
       <div className="special-image">
         <img src={special3} id="special-cake" alt="special_cake" />
       </div>
-      <div id="special-title">
+      <div aria-label="Cheese Cake" id="special-title">
         <h4>Cheese Cake</h4>
         <h4 id="item-price">$5.69</h4>
       </div>

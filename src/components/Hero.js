@@ -17,7 +17,7 @@ const Hero = () => {
           </article>
           <div className="reserve-button-container">
             <Link to="/reservation">
-            <button id="reserve-button">Reserve a table</button>
+            <button aria-label="Submit reservation" id="reserve-button">Reserve a table</button>
             </Link>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -17,16 +18,16 @@ function App() {
     <Router>
       <div className="container">
         <Nav />
-        <main className="main">
+        <div className="main">
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <Hero />
-                  <Highlights />
-                  <Testimonials />
-                  <About />
+                   <section aria-label="Hero Section"><Hero /></section>
+                   <section aria-label="Highlights Section"><Highlights /></section>
+                   <section aria-label="Testimonials Section"><Testimonials /></section>
+                   <section aria-label="About Section"><About /></section>
                 </>
               }
             />
@@ -34,9 +35,9 @@ function App() {
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reservation" element={<ReservationPage />} />
             <Route path="/restaurants" element={<RestaurantsPage />} />
-            <Route path="/basket" element={<BasketPage />} />          
-            </Routes>
-        </main>
+            <Route path="/basket" element={<BasketPage />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

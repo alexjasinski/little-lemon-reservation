@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
-import { DEFAULT_TIMES } from './Main';
-function BookingForm({ availableTimes = [], dispatch }) {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('17:00');
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState('Birthday');
+function BookingForm({ availableTimes, dispatch, submitForm }) {
+  const [formData, setFormData] = useState({
+    date: '',
+    time: '',
+    guests: 1,
+    occasion: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleDateChange = (e) => {
-    setDate(e.target.value);
-    dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+    const selectedDate = e.target.value;
+    setFormData({ ...formData, date: selectedDate });
+    dispatch({ type: 'UPDATE_TIMES', date: new Date(selectedDate) });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here API option
-    console.log('Reservation:', { date, time, guests, occasion });
+    submitForm(formData);
   };
 
   return (
@@ -27,8 +34,10 @@ function BookingForm({ availableTimes = [], dispatch }) {
         <input
           type="date"
           id="res-date"
-          value={date}
+          name="date"
+          value={formData.date}
           onChange={handleDateChange}
+          required
         />
 
         <label aria-label="Choose time" htmlFor="res-time">
@@ -36,11 +45,14 @@ function BookingForm({ availableTimes = [], dispatch }) {
         </label>
         <select
           id="res-time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}>
-          {DEFAULT_TIMES.map((availableTime) => (
-            <option key={availableTime} value={availableTime}>
-              {availableTime}
+          name="time"
+          value={formData.time}
+          onChange={handleChange}
+          required>
+          <option value="">--Please choose a time--</option>
+          {availableTimes?.map((time) => (
+            <option key={time} value={time}>
+              {time}
             </option>
           ))}
         </select>
@@ -50,12 +62,14 @@ function BookingForm({ availableTimes = [], dispatch }) {
         </label>
         <input
           type="number"
+          id="guests"
+          name="guests"
           placeholder="1"
           min="1"
           max="10"
-          id="guests"
-          value={guests}
-          onChange={(e) => setGuests(Number(e.target.value))}
+          value={formData.guests}
+          onChange={handleChange}
+          required
         />
 
         <label aria-label="Occasion" htmlFor="occasion">
@@ -63,10 +77,12 @@ function BookingForm({ availableTimes = [], dispatch }) {
         </label>
         <select
           id="occasion"
-          value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}>
-          <option>Birthday</option>
-          <option>Anniversary</option>
+          name="occasion"
+          value={formData.occasion}
+          onChange={handleChange}
+          required>
+          <option value="Birthday">Birthday</option>
+          <option value="Anniversary">Anniversary</option>
         </select>
         <input type="submit" value="Make Your reservation" />
       </form>

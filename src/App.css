@@ -68,7 +68,8 @@ h5 {
   list-style-type: none;
   align-items: center;
 }
-a, .nav-link {
+a,
+.nav-link {
   text-decoration: none;
   color: black;
   font-size: 20px;
@@ -137,7 +138,7 @@ a, .nav-link {
 }
 #highlights-specials-container {
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
   margin: 30px 0 30px 0;
 }
@@ -483,13 +484,13 @@ a, .nav-link {
 /* Media Queries */
 @media (max-width: 899px) {
   /* Global */
-  
+
   .container {
     display: flex;
     background-size: auto 100%;
     background-position: left;
   }
-  
+
   .section-background {
     display: flex;
     flex-direction: column;
@@ -512,11 +513,11 @@ a, .nav-link {
     justify-content: center;
     gap: 10px;
   }
-  
+
   #logo-header {
     display: none;
   }
-  
+
   #icon-basket {
     display: none;
   }
@@ -528,7 +529,6 @@ a, .nav-link {
   }
 
   /* Hero */
-
 
   #hero {
     flex-direction: column;
@@ -565,7 +565,7 @@ a, .nav-link {
     display: flex;
     justify-content: center;
   }
-  
+
   #reserve-button {
     align-items: center;
     justify-content: center;
@@ -581,9 +581,7 @@ a, .nav-link {
   #hero-image {
     margin: 20px 0;
   }
-  
-  
-  
+
   /* Highlights */
 
   #highlights-container {
@@ -604,7 +602,7 @@ a, .nav-link {
     font-size: 20px;
   }
 
-/* About */
+  /* About */
 
   #about {
     display: flex;
@@ -613,13 +611,12 @@ a, .nav-link {
     justify-items: center;
   }
 
-  
   #about-text {
     font-size: 36px;
     text-align: center;
     font-weight: bold;
   }
-  
+
   #about-info {
     gap: 30px;
     max-width: 900px;
@@ -633,7 +630,7 @@ a, .nav-link {
     border-radius: 19px;
   }
 
-/* Footer */
+  /* Footer */
 
   #footer-background {
     display: flex;
@@ -674,7 +671,7 @@ a, .nav-link {
     order: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
   }
 
@@ -704,7 +701,6 @@ a, .nav-link {
     text-align: center;
   }
 
-
   /* Burger-menu  */
 
   @keyframes checked-anim {
@@ -730,37 +726,37 @@ a, .nav-link {
     }
   }
 
-/* Global */
+  /* Global */
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
 
-h1 {
-  font-weight: 700;
-  margin-bottom: -0.2em;
-}
-h3 {
-  float: right;
-  font-weight: lighter;
-}
-h4 {
-  float: left;
-  margin-left: -2%;
-  font-weight: lighter;
-}
+  h1 {
+    font-weight: 700;
+    margin-bottom: -0.2em;
+  }
+  h3 {
+    float: right;
+    font-weight: lighter;
+  }
+  h4 {
+    float: left;
+    margin-left: -2%;
+    font-weight: lighter;
+  }
 
-#header-no-background {
-  display: flex;
-  position: relative;
-  z-index: 1;
-  align-items: center;
-}
+  #header-no-background {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+  }
 
-/* Nav */
+  /* Nav */
 
   .header-item {
     display: none;

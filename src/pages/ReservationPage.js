@@ -1,12 +1,19 @@
 import React from 'react';
 import BookingForm from '../components/BookingForm';
 
-function RestaurantsPage() {
+function ReservationPage({availableTimes, dispatch, submitForm }) {
+ 
+
   return (
     <>
-      <BookingForm />
+      <h1>Reservation</h1>
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatch={dispatch}
+        submitForm={submitForm} // Pass submitForm to BookingForm
+      />
     </>
   );
 }
 
-export default RestaurantsPage;
+export default ReservationPage;

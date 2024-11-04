@@ -8,7 +8,7 @@ const Highlights = () => {
     <section className="section-no-background">
       <div id="highlights-specials-container">
         <div id="highlights-container">
-          <h2 id="highlights-text">This week's special</h2>
+          <h2 id="highlights-text">This week's specials</h2>
           <button aria-label="Go to menu" id="highlights-button">
             Menu
           </button>

@@ -139,7 +139,7 @@ a,
 #highlights-specials-container {
   flex-direction: column;
   justify-content: space-between;
-  justify-items: center;
+  justify-items: space-between;
   margin: 30px 0 30px 0;
 }
 
@@ -170,7 +170,7 @@ a,
 .specials-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 45px;
   margin: 40px 0 40px 0;
 }

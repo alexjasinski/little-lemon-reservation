@@ -24,16 +24,24 @@ function App() {
               path="/"
               element={
                 <>
-                   <section aria-label="Hero Section"><Hero /></section>
-                   <section aria-label="Highlights Section"><Highlights /></section>
-                   <section aria-label="Testimonials Section"><Testimonials /></section>
-                   <section aria-label="About Section"><About /></section>
+                  <section aria-label="Hero Section">
+                    <Hero />
+                  </section>
+                  <section aria-label="Highlights Section">
+                    <Highlights />
+                  </section>
+                  <section aria-label="Testimonials Section">
+                    <Testimonials />
+                  </section>
+                  <section aria-label="About Section">
+                    <About />
+                  </section>
                 </>
               }
             />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/menu" element={<MenuPage />} />
-            <Route path="/reservation" element={<Main />} />
+            <Route path="/reservation/*" element={<Main />} />
             <Route path="/restaurants" element={<RestaurantsPage />} />
             <Route path="/basket" element={<BasketPage />} />
             <Route path="/confirmed-booking" element={<ConfirmedBooking />} />

@@ -81,6 +81,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           value={formData.occasion}
           onChange={handleChange}
           required>
+          <option value="">--Please choose an occasion--</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
         </select>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [formData, setFormData] = useState({
+    name: '',
     date: '',
     time: '',
     guests: 1,
@@ -21,6 +22,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     submitForm(formData);
+    console.log('Form submitted:', formData);
   };
 
   return (
@@ -28,8 +30,22 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
       <form
         style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
         onSubmit={handleSubmit}>
+
+<label aria-label="Name of guest" htmlFor="name-guest">
+          Guest's name
+        </label>
+        <input
+          type="text"
+          id="name-guest"
+          name="name"
+          placeholder="Type in your name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
         <label aria-label="Choose date" htmlFor="res-date">
-          Choose date
+          Choose a date
         </label>
         <input
           type="date"

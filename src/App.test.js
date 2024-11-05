@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 
-I;
 describe('App Component', () => {
   test('renders the Hero component on the home route', () => {
     render(
@@ -28,24 +27,19 @@ describe('App Component', () => {
     expect(screen.getByText(/About Us/i)).toBeInTheDocument();
   });
 
-  test('renders the Menu page on /menu', () => {
-    render(
-      <MemoryRouter initialEntries={['/menu']}>
-        <Routes>
-          <Route path="*" element={<App />} />
-        </Routes>
+  const renderWithRouter = (route) => {
+    return render(
+      <MemoryRouter initialEntries={[route]}>
+        <App />
       </MemoryRouter>
     );
+  };
+  
+  test('displays error message for an unknown route', () => {
+    renderWithRouter('/unknown');
+    expect(screen.getByText(/error/i)).toBeInTheDocument();
   });
 
-  test('displays error message for an unknown route', () => {
-    render(
-      <MemoryRouter initialEntries={['/unknown']}>
-        <Routes>
-          <Route path="*" element={<App />} />
-        </Routes>
-      </MemoryRouter>
-    );
     // Check if the error message is displayed
     expect(screen.getByText(/error/i)).toBeInTheDocument();
   });
@@ -61,4 +55,3 @@ describe('App Component', () => {
     // Check if the message is displayed
     expect(screen.getByText('Submitted: Hello World')).toBeInTheDocument();
   });
-});

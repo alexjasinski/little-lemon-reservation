@@ -4,6 +4,8 @@ import React, { useReducer } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import ReservationPage from '../pages/ReservationPage';
 import ConfirmedBooking from './ConfirmedBooking';
+import { saveReservations } from '../utils/LocalStorage';
+
 
 export const DEFAULT_TIMES = [
   '17:00',
@@ -32,6 +34,7 @@ function Main() {
   const submitForm = (formData) => {
     console.log('Submitting form data:', formData); // Logging form data for debugging
     if (submitAPI(formData)) {
+      saveReservations(formData); // Save formData to localStorage if needed
       navigate('/confirmed-booking', { state: formData });
     }
   };

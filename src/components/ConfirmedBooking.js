@@ -12,7 +12,11 @@ const ConfirmedBooking = () => {
         <>
           <h1>Your booking has been confirmed!</h1>
           <div className="booking-details">
-            <p>Thank you for choosing our restaurant. We look forward to serving you.</p>
+            <p>
+              Thank you for choosing our restaurant. We look forward to serving
+              you.
+            </p>
+            <p>Name: {booking.name}</p>
             <p>Date: {booking.date}</p>
             <p>Time: {booking.time}</p>
             <p>Guests: {booking.guests}</p>

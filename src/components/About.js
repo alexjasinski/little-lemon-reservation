@@ -41,7 +41,7 @@ const About = () => {
 function Item(props) {
   return (
     <Paper style={{ borderRadius: '19px' }}>
-        <img id="carousel" src={props.item.image} alt={props.item.name} />
+        <img aria-label="image-carousel" id="carousel" src={props.item.image} alt={props.item.name} />
         {/* <h2>{props.item.name}</h2>
         <p>{props.item.description}</p> */}
     </Paper>

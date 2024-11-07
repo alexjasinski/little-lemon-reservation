@@ -6,28 +6,28 @@ import user3 from '../assets/user3.png';
 const Testimonial3 = () => {
   return (
     <div className="testimonial-card">
-      <div className="rating-container">
-        <div className="rating-box">
+      <div aria-label="User rating" className="rating-container">
+        <div aria-label="Rated lemon" className="rating-box">
           <img src={rating} id="lemon-rating-icon" alt="Lemon rating" />
         </div>
-        <div className="rating-box">
+        <div aria-label="Rated lemon" className="rating-box">
           <img src={rating} id="lemon-rating-icon" alt="Lemon rating" />
         </div>
-        <div className="rating-box">
+        <div aria-label="Rated lemon" className="rating-box">
           <img src={rating} id="lemon-rating-icon" alt="Lemon rating" />
         </div>
-        <div className="rating-box">
+        <div aria-label="Unrated lemon" className="rating-box">
           <img src={norating} id="lemon-rating-icon" alt="Lemon rating" />
         </div>
-        <div className="rating-box">
+        <div aria-label="Unrated lemon" className="rating-box">
           <img src={norating} id="lemon-rating-icon" alt="Lemon rating" />
         </div>
       </div>
       <div className="user-container">
-        <div id="user-image-container">
+        <div aria-label="User image" id="user-image-container">
           <img src={user3} id="user1" alt="user 1 profile" />
         </div>
-        <div className="user-id">
+        <div aria-label="User info" className="user-id">
           <div className="user-info">
             <h6 id="user-info-text">Sara Lopez</h6>
           </div>
@@ -36,7 +36,7 @@ const Testimonial3 = () => {
           </div>
         </div>
       </div>
-      <article className="user-comment">
+      <article aria-label="User comment" className="user-comment">
       "Cannot stop thinking about the delicious Mac N Cheese."
       </article>
     </div>

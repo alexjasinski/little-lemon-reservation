@@ -11,10 +11,9 @@ const ConfirmedBooking = () => {
       {booking ? (
         <>
           <h1>Your booking has been confirmed!</h1>
-          <div className="booking-details">
+          <div aria-label="Booking details" className="booking-details">
             <p>
-              Thank you for choosing our restaurant. We look forward to serving
-              you.
+              Thank you for choosing our restaurant. We look forward to serving you.
             </p>
             <p>Name: {booking.name}</p>
             <p>Date: {booking.date}</p>

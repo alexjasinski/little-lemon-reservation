@@ -11,7 +11,7 @@ import AboutPage from './pages/AboutPage';
 import MenuPage from './pages/MenuPage';
 import RestaurantsPage from './pages/RestaurantsPage';
 import BasketPage from './pages/BasketPage';
-import ConfirmedBooking from './components/ConfirmedBooking';
+import ConfirmedBooking from './pages/ConfirmedBooking';
 import Main from './components/Main';
 function App() {
   return (

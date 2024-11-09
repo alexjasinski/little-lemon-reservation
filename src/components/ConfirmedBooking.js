@@ -1,6 +1,7 @@
 // src/components/ConfirmedBooking.js
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import './ConfirmedBooking.css';
 
 const ConfirmedBooking = () => {
   const location = useLocation();
@@ -12,9 +13,9 @@ const ConfirmedBooking = () => {
         <>
           <h1>Your booking has been confirmed!</h1>
           <div aria-label="Booking details" className="booking-details">
-            <p>
+            <h2>
               Thank you for choosing our restaurant. We look forward to serving you.
-            </p>
+            </h2>
             <p>Name: {booking.name}</p>
             <p>Date: {booking.date}</p>
             <p>Time: {booking.time}</p>

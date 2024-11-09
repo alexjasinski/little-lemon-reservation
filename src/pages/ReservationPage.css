@@ -1,0 +1,33 @@
+#reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+padding-bottom: 60px;
+/* background-color: rgba(158, 155, 155, 0.5); */
+}
+
+#reservation h1 {
+  align-items: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #f4ce14;
+}
+
+.booking-label {
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+.booking-input,
+.submit-button {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid ;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.booking-dropdown {
+  font-size: 16px;
+}

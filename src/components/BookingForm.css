@@ -1,0 +1,67 @@
+.form-container {
+  display: grid;
+  /* max-width: 200px; */
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fieldset {
+  border: none;
+  padding: 30px;
+  margin: 0;
+  border: 6px solid #ccc;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.legend {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #ccc;
+}
+#name-guest,
+#res-date,
+#res-time,
+#guests,
+#occasion {
+
+  color: #676364;
+  padding: 2px;
+  text-align:justify;
+  margin: 10px;
+  /* font-weight: lighter; */
+
+}
+
+#name-guest {
+	font-weight: bold	;
+}
+
+.booking-label {
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  color: #f4ce14;
+}
+.booking-input {
+  height: 45px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  color: #f4ce14;
+}

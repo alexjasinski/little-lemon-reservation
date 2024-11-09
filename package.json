@@ -45,6 +45,8 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
     "webpack": "5.91.0",

@@ -1,4 +1,3 @@
-// src/components/Main.js
 import { fetchAPI, submitAPI } from '../api/api';
 import React, { useReducer } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';

@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import ReCAPTCHA from 'react-google-recaptcha';
 import './BookingForm.css';
 
-
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const recaptchaRef = useRef();
